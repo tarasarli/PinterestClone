@@ -1,36 +1,36 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- to get html going press shift and 1-->
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./styles/normalize.css">
-    <link rel="stylesheet" href="./styles/modal_styles.css">
+    <link rel="stylesheet" href="./styles/normalize.css"> <!-- link the normalize-->
+    <link rel="stylesheet" href="./styles/modal_styles.css"> <!-- link the modal_styles-->
 </head>
 
 <body>
-    <div class="add_pin_modal">
-        <div class="add_pin_container">
-            <div class="side" id="left_side">
-                <div class="section1">
-                    <div class="pint_mock_icon_container">
+    <div class="add_pin_modal">   <!--1 so first were going to get the entire modal on screen-->
+        <div class="add_pin_container"> <!--2 container (white block in middle of screen)-->
+            <div class="side" id="left_side">   <!--3 left side of container-->
+                <div class="section1"> <!--5 we have 3 sections on left side of container so lets label them-->
+                    <div class="pint_mock_icon_container"> <!-- 10. ok so we just want the ellipse button here. so go back to pin.html and copy that part of code and paste it here. server should show huge three dots-->
                         <img src="./images/ellipse.png" alt="edit" class="pint_mock_icon">
                     </div>
                 </div>
 
-                <div class="section2">
-                    <label for="upload_img" id="upload_img_label">
-                        <div class="upload_img_container">
-                            <div id="dotted_border">
-                                <div class="pint_mock_icon_container">
-                                    <img src="./images/up-arrow.png" alt="upload_img" class="pint_mock_icon">
+                <div class="section2"> <!-- 6. --> <!-- 11. now gonna work on section 2 (the grey box)-->
+                    <label for="upload_img" id="upload_img_label"> <!--12. creating an html label for the box -->
+                        <div class="upload_img_container"> <!-- 13. going to make grey box where person uploads an image ..   shortcut:   div.upload_img_container-->
+                            <div id="dotted_border"> <!-- 14.  now going to make the dotted border within that grey box.    shortcut: div.dotted_border-->
+                                <div class="pint_mock_icon_container"> <!-- 15. within the boarder, we have icons. we have the arrow. copy paste code above where it says  <div class="pint_mock_icon_container" and then the next line is ellipse image then change code a bit down here-->
+                                    <img src="./images/up-arrow.png" alt="upload_img" class="pint_mock_icon"> <!-- 16. now server should be showing the arrow and the three dots-->
                                 </div>
                                 <div>Click to upload</div>
                                 <div>Recommendation: Use high-quality .jpg files less than 20MB</div>
                             </div>
                         </div>
-                        <input type="file" name="upload_img" id="upload_img">
+                        <input type="file" name="upload_img" id="upload_img"> <!--13. give placeholder name for the image that the user is uploading. usr is not going to be able to the label and the input.  shortcut: write input:file-->
                     </label>
 
                     <div class="modals_pin">
@@ -40,13 +40,13 @@
                     </div>
                 </div>
 
-                <div class="section3">
+                <div class="section3"> <!-- 7 -->
                     <div class="save_from_site">Save From Site</div>
                 </div>
             </div>
 
-            <div class="side" id="right_side">
-                <div class="section1">
+            <div class="side" id="right_side">   <!--4  right side of container -->
+                <div class="section1"> <!-- 8 the right side of container has 2 sections so lets label them. were going to get back to this after were done with left side-->
                     <div class="select_size">
                         <select name="pin_size" id="pin_size">
                             <option value="" disabled selected>Select</option>
@@ -58,7 +58,7 @@
                     </div>
                 </div>
 
-                <div class="section2">
+                <div class="section2"> <!-- 9 -->
                     <input placeholder="Add your title" type="text" class="new_pin_input" id="pin_title">
                     <input placeholder="Tell everyone what your Pin is about" type="text" class="new_pin_input" id="pin_description">
                     <input placeholder="Add a destination link" type="text" class="new_pin_input" id="pin_destination">

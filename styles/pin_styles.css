@@ -1,119 +1,135 @@
-/* .card {
+ /*we are using the THINGS from pin.html in css and adding color, positioning, and size to them*/
+ 
+ .card { /* this is going to be the "cards" in the homepage of pinterest app */
 	width: 236px;
 	height: 472px;
-	border-radius: 16px;
-	position: relative;
+	border-radius: 16px; /*will make the borders rounded */
+	position: relative; /*sets the position relative to its normal position*/
 
-	background-color: green;
-	overflow: hidden;
-} */
+	background-color: green; /* this is only temporay so we can see where the card is, the pic we generate will go here */
+	overflow: hidden; /*(With the hidden value, the overflow is clipped, and the rest of the content is hidden*/
+} 
 
-.pin_title {
+.pin_title { /*this is actually not going to be visable*/
 	width: 0px;
 	height: 0px;
-	opacity: 0;
+	opacity: 0;  /*not visable*/
 }
 
-.pin_modal {
-	width: 100%;
+.pin_modal { /*this is the things that come up when you hover over the card*/
+	width: 100%; /*px is hardcorded (100px of users scren). % means going to take up 100% of its parent whihc is the card itself.*/
 	height: 100%;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	position: absolute; /*affects how top left tranform works; directly defines where its going to be located */
+	top: 50%; /*will move the .pin_modal to be in the middle ish of the page */
+	left: 50%;/*will move the .pin_modal to be more in the left side of the page */
+	transform: translate(-50%, -50%); /* ensuring the scaling and placement of the modal*/
 
-	z-index: 9999;
-	background-color: rgba(0, 0, 0, 0.1);
-	opacity: 0;
-	transition-duration: 0.3s;
+	z-index: 9999; /*Ensures that .pin_modal is always on top ON TOP OF WHAT? LIKE POPUP YM*/
+	background-color: rgba(0, 0, 0, 0.1); /*change the color */
+	
+	opacity: 0; /*hide it >> now do pin_modal:hover, then do transition-duration: */
+	
+	transition-duration: 0.3s; /*will slow down the changing of opacity by .3 seconds. now change above opacity to 1 so we can see what were doing*/
 }
 
-.pin_modal:hover {
-	opacity: 1;
+.pin_modal:hover {/*whenever we hover over .pin_modal, the opacity will change to 1 (we will see .pin_modal)*/
+	opacity: 1; 
+} /*now go to .pin_modal and change it to 1 so we can see what were doing without having to hover */
+
+.pin_modal .modal_head { /*now going to work on the top most part of the modal*/
+	width: 100%;
+	height: 15%;
+	position: fixed; /* is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element.*/
+	top: 0; /* ?*/
+	display: flex; /*By using display flex in parent elements, child elements automatically align like columns or rows with auto width and auto height.*/
+	justify-content: flex-end; /*will align all the flex items to the right end of the container*/
+	align-items: center; /* aligns items on y axis on all direct children as a group */
 }
 
-.pin_modal .modal_head {
+.pin_modal .modal_head .save_card { /*now going to work on the save button  */
+	margin-right: 20px; /*4 adjust right margin*/
+	width: 53px;  /*1*/
+	height: 40px; /*2*/
+	border-radius: 22px; /*8*/
+	display: flex; /*9*/
+	justify-content: center; /*10     /* Pack items around the center*/
+	align-items: center; /*11    aligning items on y axis */
+
+	font-size: 14px; /*5*/
+	font-weight: 700; /*6 boldness of a font*/
+
+	color: white; /*7 change font color to white */
+	background-color: #ff0000; /*3*/
+	cursor: pointer; /*12*/
+}
+
+.pin_modal .modal_foot { /*now going to work on the bottom portion of the main card. copy and past inside of .pin_modal .modal_head*/
 	width: 100%;
 	height: 15%;
 	position: fixed;
-	top: 0;
+	bottom: 0; /*so it stays at bottom*/
 	display: flex;
-	justify-content: flex-end;
+	justify-content: space-evenly; /*everything in modal_foot will be spaced evenly*/
 	align-items: center;
 }
 
-.pin_modal .modal_head .save_card {
-	margin-right: 20px;
-	width: 53px;
-	height: 40px;
-	border-radius: 22px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-	font-size: 14px;
-	font-weight: 700;
-
-	color: white;
-	background-color: #ff0000;
-	cursor: pointer;
-}
-
-.pin_modal .modal_foot {
-	width: 100%;
-	height: 15%;
-	position: fixed;
-	bottom: 0;
-	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
-}
-
-.pint_mock_icon_container {
+.pint_mock_icon_container { /*now work on the buttons in the modal foot, bottom portion of the main card */
 	width: 32px;
 	height: 32px;
-	border-radius: 50%;
-	display: flex;
-	justify-content: center;
+	border-radius: 50%; /*to make the buttons in modal_foot circles*/
+	display: flex; 
+	justify-content: center; /* Pack items around the center */
 	align-items: center;
-	flex-shrink: 0;
 
-	background-color: #f0f0f0;
+
+
+
+	flex-shrink: 0; /*dont this rn. do this after .pin_modal .modal_foot .destination span */
+
+
+
+
+
+	background-color: #f0f0f0; /*background color white*/
 	cursor: pointer;
 }
 
-.pint_mock_icon {
-	width: 50%;
-}
+.pint_mock_icon { /* going to make images be width of 50% of the container*/
+	width: 50%; 
+} /*as we see on server, "eatery" is not in the correct place. it should be beside the upper right arrow. now go back to pin.html and show that its in pin modal, modal foot, destination */
 
 .pin_modal .modal_foot .destination {
-	width: 132px;
-	height: 32px;
-	border-radius: 18px;
-	display: flex;
-	justify-content: flex-start;
+	width: 132px; /*going to make a container*/
+	height: 32px; /*going to make a container > now do background color*/
+	border-radius: 18px; /*round the edges*/
+	display: flex; 
+	justify-content: flex-start; /* Pack flex items from the start */
 	align-items: center;
 
 	font-size: 16px;
-	font-weight: 700;
+	font-weight: 700; /*boldness*/
 
-	background-color: #f0f0f0;
+	background-color: #f0f0f0; /*make that container white*/
 	cursor: pointer;
-}
+} 
 
-.pin_modal .modal_foot .destination span {
-	overflow: hidden;
-	white-space: nowrap;
-}
+.pin_modal .modal_foot .destination span { /*now go to pin.html and make longgg word where eatery is. the word is going off the container and pushes the icon so were going to fix that. Keep like this until finished with this blob*/
 
-.pin_image {
-	width: 100%;
-	height: 100%;
+	overflow: hidden; /*hide the overflow of text*/
+	white-space: nowrap; /*so that the text continues on the same line */ 
+} /*to avoid the icon from being squished we are going to go to  .pint_mock_icon_container  and add this line 	flex-shrink: 0; */
+
+.pin_image { /*now need to center the image in the screen, as we can see its in the left hand corner rn. so first, to see what we are doing, we're going to change the opacity to 0    in .pin_modal{ */
+	width: 100%; /*full screen on card*/
+	height: 100%; /*full screen on card*/
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-
+/*now we need to make the actual picture 100% (full screen). rn only the container is 100% (full screen). so :  */
 /* .pin_image img {
 	max-height: 100%;
 } */
+
+
+/*now going to do pin_script.js to program actions, conditions, and other programming */
