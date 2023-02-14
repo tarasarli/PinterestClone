@@ -29,7 +29,8 @@
 	
 	opacity: 0; /*hide it >> now do pin_modal:hover, then do transition-duration: */
 	
-	transition-duration: 0.3s; /*will slow down the changing of opacity by .3 seconds. now change above opacity to 1 so we can see what were doing*/
+	transition-duration: 0.3s; /*will slow down the changing of opacity by .3 seconds. now change 
+									above opacity to 1 so we can see what were doing*/
 }
 
 .pin_modal:hover {/*whenever we hover over .pin_modal, the opacity will change to 1 (we will see .pin_modal)*/
@@ -39,9 +40,13 @@
 .pin_modal .modal_head { /*now going to work on the top most part of the modal*/
 	width: 100%;
 	height: 15%;
-	position: fixed; /* is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element.*/
+	position: fixed; /* is positioned relative to the viewport, 
+						which means it always stays in the same place even if 
+						the page is scrolled. The top, right, bottom, and left 
+						properties are used to position the element.*/
 	top: 0; /* ?*/
-	display: flex; /*By using display flex in parent elements, child elements automatically align like columns or rows with auto width and auto height.*/
+	display: flex; /*By using display flex in parent elements, 
+						child elements automatically align like columns or rows with auto width and auto height.*/
 	justify-content: flex-end; /*will align all the flex items to the right end of the container*/
 	align-items: center; /* aligns items on y axis on all direct children as a group */
 }
@@ -96,7 +101,8 @@
 
 .pint_mock_icon { /* going to make images be width of 50% of the container*/
 	width: 50%; 
-} /*as we see on server, "eatery" is not in the correct place. it should be beside the upper right arrow. now go back to pin.html and show that its in pin modal, modal foot, destination */
+} /*as we see on server, "eatery" is not in the correct place. it should be beside the upper 
+		right arrow. now go back to pin.html and show that its in pin modal, modal foot, destination */
 
 .pin_modal .modal_foot .destination {
 	width: 132px; /*going to make a container*/
@@ -113,13 +119,18 @@
 	cursor: pointer;
 } 
 
-.pin_modal .modal_foot .destination span { /*now go to pin.html and make longgg word where eatery is. the word is going off the container and pushes the icon so were going to fix that. Keep like this until finished with this blob*/
+.pin_modal .modal_foot .destination span { /*now go to pin.html and make longgg word where eatery is.
+												 the word is going off the container and pushes the icon so were
+												  going to fix that. Keep like this until finished with this blob*/
 
 	overflow: hidden; /*hide the overflow of text*/
 	white-space: nowrap; /*so that the text continues on the same line */ 
+
 } /*to avoid the icon from being squished we are going to go to  .pint_mock_icon_container  and add this line 	flex-shrink: 0; */
 
-.pin_image { /*now need to center the image in the screen, as we can see its in the left hand corner rn. so first, to see what we are doing, we're going to change the opacity to 0    in .pin_modal{ */
+.pin_image { /*now need to center the image in the screen, as we can see its in the left hand corner rn. 
+				so first, to see what we are doing, we're going to change the opacity to 0    in .pin_modal{ */
+					
 	width: 100%; /*full screen on card*/
 	height: 100%; /*full screen on card*/
 	display: flex;
