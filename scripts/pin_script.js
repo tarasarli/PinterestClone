@@ -41,4 +41,5 @@ document.querySelector('#picture').addEventListener('change', event => { //1 use
 
 // now choose a picture to show . so now pin mockup is done. now gonna do add modal page mockup//
 
-//now create modal.html, (styles folder) modal_styles.css, (scripts folder) modal_script.js. now go to modal.html//
+//now create modal.html, (styles folder) modal_styles.css, (scripts folder) modal_script.js. //
+//now go to modal.html//
