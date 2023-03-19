@@ -1,4 +1,4 @@
-let pin_image_blob = null;
+let pin_image_blob = null; /*1.03 in vid */ 
 
 
 document.querySelector('#upload_img').addEventListener('change', event => {

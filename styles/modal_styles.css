@@ -22,7 +22,7 @@
     overflow: hidden; /*hide overflow*/
     display: flex;
   
-    background-color: #ffffff;
+    background-color: #ffffff;     /* left off here in workshop 4*/ 
   }
   
   .side { /*do the side*/
@@ -32,7 +32,7 @@
   }
   
   #left_side { /*keep whats below*/
-    /* background-color: orang e; */
+    /* background-color: orange; */
   }
   
   #right_side {/*keep whats below. at this point there should be blue on left and orange on right*/
@@ -106,12 +106,7 @@
     cursor: pointer;
   }
   
-  #left_side .section2 #upload_img_label input {  /*6. this is going to hide the input on the screen! */
-    width: 0px;
-    height: 0px;
-    opacity: 0;
-  }
-  
+
   #left_side .section2 #upload_img_label .upload_img_container { /*3. this is grey box */
     padding: 10px;
     width: 100%;
@@ -136,28 +131,36 @@
   #left_side .section2 .pint_mock_icon_container { /* 5 gonna do the upper right arrow container*/
     background-color: #767676;
   }
+
+  #left_side .section2 #upload_img_label input {  /*6. this is going to hide the input on the screen! */
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+  }
   
-  #left_side .section3 .save_from_site { /*7. makingwhere it says "save from site" the way its supposed to look */
+  #left_side .section3 .save_from_site { /*7. going to style the button for the "save from site"  */
     width: 340px;
     height: 48px;
+    background-color: #efefef;
     border-radius: 22px;
     display: flex;
     justify-content: center;
     align-items: center;
   
-    font-weight: 700;
+    font-weight: 700; /*to make font bold*/
+    cursor: pointer; /*so that when we hover over the button, our cursor will become pointer*/
   
-    background-color: #efefef;
+    
   }
   
-  .modals_pin {
+  .modals_pin { /*copy code for .card {}, .pin_image{}, .pin_iamge img {} from pin_styles.css, and then change around code a bit. WHY THOOOOOOOOO*/
     width: 252px;
     height: 512px;
     border-radius: 16px;
     position: relative;
-    display: none;
-    opacity: 0;
-  
+    display: none; /*were doing this */
+    opacity: 0; /* and so when we click on upload image, the click to upload and rest of it becomes hidden, and the image shows instead  */
+    /*IM NOT EXACTLY SURE HOW THE DISPALY:NONE AND OPACITY:0 ARE DOING WHAT THEYRE DOING. LIKE WHY CANT WE JUST PUT DISPLAY NONE OR JUST OPACITY 0?*/
     overflow: hidden;
   }
   
@@ -169,9 +172,23 @@
     align-items: center;
   }
   
-  /* .pin_image img {
+  .pin_image img {
     max-height: 100%;
-  } */
+  }   
+
+  /*once we reach here, we are going to go to turn off the color 
+  for all the stuff on the left, to see if what wtver done so far is 
+  correct. so go to #left_side {} and comment the background
+  color out, go to  .section1 {}, .section2 {}, and section3 {} --> comment 
+  out the background color.  
+  (compare to picture on powerpoint 
+  ((rn its on my desktop labeled "actual pinterest")). yes! its correct; 
+  there are very small differences but we wont fix those just 
+  for the sake of time. */
+
+  /*so now were going to turn all those colors back on (uncomment them). when we click on the "click to upload"
+  it prompts us to choose a photo. but rn, its not showing the photo. were gonna work on the right side and then well come back 
+  to fix that.*/ 
   
   .pin_max_width {
     max-width: 100%;
@@ -180,55 +197,68 @@
   .pin_max_height {
     max-height: 100%;
   }
-  
-  #right_side .section1 {
+  /*so lets go to modal.html and see what we have to first define for the right side.
+  we see its gonna eb  section 1 of the right side. 
+  show the pic where it explains sections of each side to jog memory. 
+  remember section 1 is gonna be where the dropdown menu is (where it says small, medium, large)*/
+  #right_side .section1 { 
     display: flex;
     justify-content: flex-end;
   }
-  #right_side .section1 .select_size{
+  #right_side .section1 .select_size{ /*go to modal.html and look at right_side. the second thing we have to define is the select_size */
     width: 236px;
     height: 40px;
     display: flex;
   }
   
-  #right_side .section1 .select_size select{
+  #right_side .section1 .select_size select{ /*now gonna do the select element */
     width: 70%;
     height: 100%;
+    background-color: #EFEFEF;
     border:none;
     border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
-    outline: none;
+    border-bottom-left-radius: 8px; /*show that when we click the dropdown menu, it show the outline, which we dont want*/
+    outline: none; /*so were gonna write this so it doesnt show the outline*/
   
-    font-size: 16px;
+    font-size: 16px; /*editing font size */
   
-    background-color: #EFEFEF;
+    
   }
   
-  #right_side .section1 .select_size .save_pin{
+  #right_side .section1 .select_size .save_pin{ /*now gonna do the save_pin item element */
     width: 30%;
     height: 100%;
+    background-color: #E60023;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     display: flex;
-    justify-content: center;
+    justify-content: center; 
     align-items: center;
   
     font-weight: 700;
   
     color: white;
-    background-color: #E60023;
+    
     cursor: pointer;
   }
   
-  #right_side .section2 .new_pin_input {
-    margin-bottom: 20px;
+  #right_side .section2 .new_pin_input { /*now gonna do section 2. go to pic on pwp to show what section 2 is supposed to look like to jog memory*/
+    
     width: 100%;
     height: 50px;
     border: none;
-    border-bottom: 2px solid #C6C6C6;
-    outline: none;
+    border-bottom: 2px solid #C6C6C6; /*to show the line underneath each*/
+    margin-bottom: 20px;
+    outline: none; /*getting rid of outline when we click on it*/
+
   
     font-size: 16px;
   
-    background-color: transparent;
+    background-color: transparent; /*getting rid of background color (making ti transparent*/
   }
+
+  /*now were gonna go to modal.script.js file and make the right side so it shows the picture 
+  when we click on it, and also make it so when we click the save button on the left side, it'll 
+  save all the info about the picture, the pin size, the title, the description, the destination, 
+  \and the image data. > we'll package it into an object. and then well merge the two, and send that 
+  object to a function that displays it an actual card (the pin.html)   WAIT CAN YOU REEXPLAINNNNNNNNNNNNNNNNNNNNNNNNNN */
