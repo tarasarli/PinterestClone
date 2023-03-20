@@ -176,6 +176,14 @@
     max-height: 100%;
   }   
 
+  .pin_max_width {
+    max-width: 100%;
+  }
+  
+  .pin_max_height {
+    max-height: 100%;
+  }
+
   /*once we reach here, we are going to go to turn off the color 
   for all the stuff on the left, to see if what wtver done so far is 
   correct. so go to #left_side {} and comment the background
@@ -190,13 +198,10 @@
   it prompts us to choose a photo. but rn, its not showing the photo. were gonna work on the right side and then well come back 
   to fix that.*/ 
   
-  .pin_max_width {
-    max-width: 100%;
-  }
   
-  .pin_max_height {
-    max-height: 100%;
-  }
+ 
+
+
   /*so lets go to modal.html and see what we have to first define for the right side.
   we see its gonna eb  section 1 of the right side. 
   show the pic where it explains sections of each side to jog memory. 
