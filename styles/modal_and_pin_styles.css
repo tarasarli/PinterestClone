@@ -1,24 +1,29 @@
-.navigation_bar {
+.navigation_bar {  /*so lets make it bigger and make sure to put it at the top of the page*/
     width: 100%;
     height: 10%;
     position: fixed;
     top: 0;
   }
   
-  .navigation_bar .add_pin {
+  .navigation_bar .add_pin { 
     width: 60px;
     height: 60px;
-    position: relative;
+    position: relative; /*so now lets move it to the upper right side */
     top: 10%;
     left: 90%;
   
-    transition-duration: 0.3s;
+   
   }
   
-  .navigation_bar .add_pin:hover {
-    background-color: #767676;
-    transform: scale(1.2);
-  }
+  .navigation_bar .add_pin:hover { 
+    background-color: #767676; /*when we hover over it, we want the background color to change to a darker grey color.*/
+    transform: scale(1.2); /*and we want the nav bar to become a bit bigger*/
+  }  /*and since it transitions too fast rn, lets add this code to the block above (  .navigation_bar .add_pin {} ) , 
+     transition-duration:0.3s; */
+
+
+
+     /*now were gonna go back to the modal_and_pin.html*/
   
   .add_pin_modal {
     opacity: 0;

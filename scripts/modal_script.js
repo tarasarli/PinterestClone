@@ -66,7 +66,8 @@ document.querySelector('.save_pin').addEventListener('click', () => {
 });
 
 
-/* I LITERALLY HAVE NO IDEA WHATS GOING ON BESIDE ONLOAD ;<    */
-
-
-/*left off 1.10 */
+/* now, we should be able to interact with the live server, pick an image, pick size, add title, description, and destination link. But we still cannot save it.
+We will now use this modal so that when we click save, itll show the pin. so our end goal is to  merge modal and pin.
+So lets go ahead and make modal_and_pin.html file, go into styles folder to create modal_and_pin_styles.css, and go into scripts folder to create modal_and_pin.js file.
+Now we will go into modal_and_pin.html and open the live server from this html document
+*/

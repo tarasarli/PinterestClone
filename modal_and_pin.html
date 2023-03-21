@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- to get html going press shift and 1-->
 <html lang="en">
 
 <head>
@@ -10,16 +10,16 @@
     <link rel="stylesheet" href="./styles/modal_styles.css">
     <link rel="stylesheet" href="./styles/modal_and_pin_styles.css">
 </head>
-
+<!-- now go inbetween the two body tage and write this <script src="./scripts/modal_and_pin.js"></script>. and then do rest of code ontop of it-->
 <body>
-    <div class="navigation_bar">
-        <div class="pint_mock_icon_container add_pin">
+    <div class="navigation_bar"> <!--remember shortcut is div.navigation_bar. so we will be making the navigation bar, which is the + sign on the upper right side of the pinterest app. SHOW PIC (with pink backgrounf drom video, and point out where im talking about).lets go to pin.html and copy code where it says pint_mock_icon_container, and then edit it a bit-->
+        <div class="pint_mock_icon_container add_pin" ></div> <!-- I just want to point out that we are adding a second class here by putting a space and then writing add_pin, since we want to differentiate it from the way the pint_mock_icon_container acts (as we will be clicking on the navigation bar) -->
             <img src="./images/add.png" alt="add_pin" class="pint_mock_icon">
         </div>
-    </div>
+    </div> <!-- once were here (including the script line at bottom, we should see a + icon on top left of page. were gonna style page so the + icon is on top right of page, and make it biggger, and make it so that when we hover over it, an animation will show. SO LETS GO TO modal_and_pin_styles.css to make it that way )-->
 
-    <div class="pin_container">
-        <!-- <div class="card">
+    <div class="pin_container"> <!--now were gonna make the pin_container to add pins to a container, and the closing div for it. Under it, we will copy the code from pin.html, where it says card, up until the second div right before the script src, and past it here-->
+         <div class="card">  <!--.-->
             <div class="pin_title"></div>
 
             <div class="pin_modal">
@@ -48,8 +48,13 @@
             <div class="pin_image">
                 <img src="" alt="pin_image">
             </div>
-        </div> -->
-    </div>
+        </div> 
+    </div> <!--.-->
+
+    <!-- now all of this is hard coded but we do not want that so , were gonna comment out everything from      <div class="card">     and the div right above this line.
+         Now were gonna go into modal_and_pin.js to programmatically add a pin, referring back to the part which we coded out here to write up our code. were gonna generate all
+        of this in the javascript, and then attach it to the pin_container. so now, we will go to modal.html and copt all the code from 
+        <div class="add_pin_modal">       to    the div right above the script src line, and paste it down here >    -->
 
 
     <div class="add_pin_modal">
@@ -113,3 +118,5 @@
 </body>
 
 </html>
+
+<!-- now were gonna open up server from modal_and_pin.html-->
