@@ -139,3 +139,6 @@ function reset_modal() {
     document.querySelector('#pin_size').value = '';
     pin_image_blob = null;
 }
+
+//they left off here. so now were gonna put together the final pinterest layout. gonna make "final_board,html", in the  scripts folder make a "final_board.js", and in the styles folder make a "final_board.css" file. 
+//now were gonna go into the final_board.html file

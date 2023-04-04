@@ -1,4 +1,5 @@
-let pin_image_blob = null; /*we want to save the image dataa outside of the function. the blob is the type of data (a large string of characters) */ 
+let pin_image_blob = null; /*we want to save the image dataa outside of the function. the blob 
+                        is the type of data (a large string of characters) */ 
 
 /*now, when we click on the "click to upload", we want the thing to popup (where we can choose the photo)
 and then we want to save the data. we already worked out this logic in the pin_script.js
@@ -12,13 +13,24 @@ document.querySelector('#upload_img').addEventListener('change', event => { /*so
                 const new_image = new Image(); /* this is to generate a new image */
 
                 new_image.src = reader.result; /*the reader.result is the image data*/
-                pin_image_blob = reader.result; /*we will save the image data )reader.result into the variable we made at hte top of the file which is  pin_image_blob, so that we can save it in an object using a different function*/ 
+                pin_image_blob = reader.result; /*we will save the image data )reader.result 
+                                                into the variable we made at hte top of the file which is  
+                                                pin_image_blob, so that we can save it in an object using a different function*/ 
 
                 new_image.onload = function () { /* 1. when that new image has loaded, we want the following function to execute*/
-                    const modals_pin = document.querySelector('.add_pin_modal .modals_pin'); /* 4. we will show the modals_pin (which is the image??), by doing 2 things.. this line and the line below it*/
+                    const modals_pin = document.querySelector('.add_pin_modal .modals_pin'); /* 4. we will show the
+                                                                                                 modals_pin (which is the image??), 
+                                                                                                by doing 2 things.. this line and the line below it*/
                     new_image.classList.add('pin_max_width');
 
-                    document.querySelector('.add_pin_modal .pin_image').appendChild(new_image);  /* 2. we are going to append the image tag to the pin_image. NOW, we have the image in there but the modals_pin pin_iamge is hidden????, so we are going to hide the label, which is the (reference to the grey stuff on left side on the live server), and we are going to show the actual image */
+                    document.querySelector('.add_pin_modal .pin_image').appendChild(new_image);  /* 2. we are going to append the   
+                                                                                                image tag to the pin_image. NOW, we 
+                                                                                                have the image in there but the 
+                                                                                                modals_pin pin_iamge is hidden????, 
+                                                                                                so we are going to hide the label, 
+                                                                                                which is the (reference to the grey 
+                                                                                                    stuff on left side on the live server), 
+                                                                                                    and we are going to show the actual image */
                     document.querySelector('#upload_img_label').style.display = 'none'; /* 3. to hide the image in terms of display, we will write this*/
 
                     modals_pin.style.display = 'block'; /* 5. now were gonna turn it on???? */
@@ -66,8 +78,10 @@ document.querySelector('.save_pin').addEventListener('click', () => {
 });
 
 
-/* now, we should be able to interact with the live server, pick an image, pick size, add title, description, and destination link. But we still cannot save it.
+/* now, we should be able to interact with the live server, pick an image, pick size, add title,
+ description, and destination link. But we still cannot save it.
 We will now use this modal so that when we click save, itll show the pin. so our end goal is to  merge modal and pin.
-So lets go ahead and make modal_and_pin.html file, go into styles folder to create modal_and_pin_styles.css, and go into scripts folder to create modal_and_pin.js file.
+So lets go ahead and make modal_and_pin.html file, go into styles folder to create 
+modal_and_pin_styles.css, and go into scripts folder to create modal_and_pin.js file.
 Now we will go into modal_and_pin.html and open the live server from this html document
 */

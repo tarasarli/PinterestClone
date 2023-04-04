@@ -97,9 +97,12 @@
   #left_side .section1 .pint_mock_icon_container:hover { /*1. so that when we hover it will change color to white*/
     background-color: rgba(239, 239, 239, 1);
   }
+
+
+  
   
   #left_side .section2 #upload_img_label { /*2. in section 2, we need to do grey box, then dotted border portion, then the innards
-    so were first doing the label bcs grey box is in the label (user doesnt see the label)*/
+    so were first doing the label, user doesnt see the label.   */
     width: 100%;
     height: 100%;
   
@@ -107,7 +110,7 @@
   }
   
 
-  #left_side .section2 #upload_img_label .upload_img_container { /*3. this is grey box */
+  #left_side .section2 #upload_img_label .upload_img_container { /*3. this is grey box. which is inside of the label */
     padding: 10px;
     width: 100%;
     height: 100%;
@@ -153,14 +156,15 @@
     
   }
   
-  .modals_pin { /*copy code for .card {}, .pin_image{}, .pin_iamge img {} from pin_styles.css, and then change around code a bit. WHY THOOOOOOOOO*/
+  .modals_pin { /* now were gonna go to pin_styles.css and copy code for .card {}, .pin_image{}, .pin_iamge img {} , 
+              and then change around code a bit. WHY THOOOOOOOOO*/
     width: 252px;
     height: 512px;
     border-radius: 16px;
     position: relative;
     display: none; /*were doing this */
     opacity: 0; /* and so when we click on upload image, the click to upload and rest of it becomes hidden, and the image shows instead  */
-    /*IM NOT EXACTLY SURE HOW THE DISPALY:NONE AND OPACITY:0 ARE DOING WHAT THEYRE DOING. LIKE WHY CANT WE JUST PUT DISPLAY NONE OR JUST OPACITY 0?*/
+    
     overflow: hidden;
   }
   
@@ -203,9 +207,10 @@
 
 
   /*so lets go to modal.html and see what we have to first define for the right side.
-  we see its gonna eb  section 1 of the right side. 
   show the pic where it explains sections of each side to jog memory. 
-  remember section 1 is gonna be where the dropdown menu is (where it says small, medium, large)*/
+  remember section 1 is gonna be where the dropdown menu is (where it says small, medium, large)
+  we see its gonna be  section 1 of the right side. 
+  */
   #right_side .section1 { 
     display: flex;
     justify-content: flex-end;
@@ -266,4 +271,4 @@
   when we click on it, and also make it so when we click the save button on the left side, it'll 
   save all the info about the picture, the pin size, the title, the description, the destination, 
   \and the image data. > we'll package it into an object. and then well merge the two, and send that 
-  object to a function that displays it an actual card (the pin.html)   WAIT CAN YOU REEXPLAINNNNNNNNNNNNNNNNNNNNNNNNNN */
+  object to a function that displays it an actual card (the pin.html)   W */

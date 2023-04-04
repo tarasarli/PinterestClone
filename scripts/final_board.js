@@ -1,3 +1,5 @@
+// we are going to copy all the code from the "modal_and_pin.js" and then add in a couple lines
+
 const add_pin_modal = document.querySelector('.add_pin_modal');
 
 document.querySelector('.add_pin').addEventListener('click', () => {
@@ -78,7 +80,9 @@ function create_pin(pin_details) {
 
     new_image.onload = function () {
         new_pin.classList.add('card');
-        new_pin.classList.add(`card_${pin_details.pin_size}`);
+        new_pin.classList.add(`card_${pin_details.pin_size}`); /* add in this line ; this is so that there isnt any overlap in the code for the card. 
+                                                                the pin size comes from the selection menu the code in this file where it says
+                                                                pin_size: document.querySelector('#pin_size').value */
         new_image.classList.add('pin_max_width');
 
         new_pin.innerHTML = `<div class="pin_title">${pin_details.title}</div>
@@ -140,3 +144,6 @@ function reset_modal() {
     document.querySelector('#pin_size').value = '';
     pin_image_blob = null;
 }
+
+//now the very last thing we have to do is to go into pin_styles and comment out the code for .card{} to ensure theres no overlap in code. 
+//so go to pin_styles.css
